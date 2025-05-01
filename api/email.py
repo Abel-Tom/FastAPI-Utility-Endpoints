@@ -15,6 +15,6 @@ def send_email(request: EmailRequest):
     send_email_background(request.to_email, request.subject, request.body)
     return {"message": "Email is being sent in the background."}
 
-@email_router.get("/test")
-def test_email():
-    return {"message": f'{config.EMAIL_USERNAME} {config.EMAIL_PASSWORD}'}
+# @email_router.get("/test")
+# def test_email():
+#     return {"message": f'{config.EMAIL_USERNAME} {config.EMAIL_PASSWORD}'}
